@@ -49,8 +49,8 @@ function sys_clean(){
 	sed -i '/iptables -A INPUT -p icmp -j ACCEPT/d' /etc/rc.d/rc.local
 	sed -i '/iptables -A INPUT -p tcp --dport 22 -j ACCEPT/d' /etc/rc.d/rc.local
 	sed -i '/iptables -I INPUT -p tcp --dport 80 -j ACCEPT/d' /etc/rc.d/rc.local
-	sed -i '/iptables -A INPUT -p tcp --dport 4433 -j ACCEPT/d' /etc/rc.d/rc.local
-	sed -i '/iptables -A INPUT -p udp --dport 4433 -j ACCEPT/d' /etc/rc.d/rc.local
+	sed -i '/iptables -A INPUT -p tcp --dport 3361 -j ACCEPT/d' /etc/rc.d/rc.local
+	sed -i '/iptables -A INPUT -p udp --dport 3361 -j ACCEPT/d' /etc/rc.d/rc.local
 	sed -i '/iptables -A INPUT -j DROP/d' /etc/rc.d/rc.local
 	sed -i '/iptables -t nat -F/d' /etc/rc.d/rc.local
 	sed -i '/iptables -t nat -A POSTROUTING -s 10.12.0.0\/24 -o eth0 -j MASQUERADE/d' /etc/rc.d/rc.local
@@ -127,7 +127,7 @@ cp crl.pem /etc/ocserv/
 #配置 ocserv
 cd /etc/ocserv/
 rm -rf ocserv.conf
-wget --no-check-certificate https://raw.githubusercontent.com/chendong12/ocserv/master/ocserv.conf
+wget --no-check-certificate https://raw.githubusercontent.com/ximliu/ocserv/master/ocserv.conf
 #
 cd /root/anyconnect
 wget --no-check-certificate https://raw.githubusercontent.com/chendong12/ocserv/master/gen-client-cert.sh
