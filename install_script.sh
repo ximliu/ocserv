@@ -127,7 +127,7 @@ cp crl.pem /etc/ocserv/
 #配置 ocserv
 cd /etc/ocserv/
 rm -rf ocserv.conf
-wget --no-check-certificate https://raw.githubusercontent.com/ximliu/ocserv-1/master/ocserv.conf
+wget --no-check-certificate https://raw.githubusercontent.com/ximliu/ocserv/master/ocserv.conf
 #
 cd /root/anyconnect
 wget --no-check-certificate https://raw.githubusercontent.com/ximliu/ocserv/master/gen-client-cert.sh
