@@ -102,11 +102,23 @@ systemctl start mariadb
 systemctl start httpd
 systemctl start radiusd
 iptables -I INPUT -p tcp --dport 9090 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1812 -j ACCEPT
+iptables -I INPUT -p udp --dport 1812 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1813 -j ACCEPT
+iptables -I INPUT -p udp --dport 1813 -j ACCEPT
+iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+iptables -I INPUT -p udp --dport 3306 -j ACCEPT
 EOF
 systemctl start mariadb
 systemctl start httpd
 systemctl start radiusd
 iptables -I INPUT -p tcp --dport 9090 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1812 -j ACCEPT
+iptables -I INPUT -p udp --dport 1812 -j ACCEPT
+iptables -I INPUT -p tcp --dport 1813 -j ACCEPT
+iptables -I INPUT -p udp --dport 1813 -j ACCEPT
+iptables -I INPUT -p tcp --dport 3306 -j ACCEPT
+iptables -I INPUT -p udp --dport 3306 -j ACCEPT
 }
 
 function set_web_config7(){
